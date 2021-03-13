@@ -47,10 +47,13 @@ public class WebSecurityConfig {
 
         @Override
         protected void configure(HttpSecurity http) throws Exception {
-            http
-                .antMatcher("/user/**")
-                .authorizeRequests(authorize -> authorize.anyRequest().authenticated())
-                .formLogin(form -> form.loginPage("/login").permitAll());
+            http.csrf().disable()
+                    .formLogin()
+                    .loginPage("/login.html")
+                    .and()
+                    .authorizeRequests()
+                    .antMatchers("/login.html").permitAll()
+                    .anyRequest().authenticated();
         }
     }
 }
