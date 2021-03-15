@@ -46,7 +46,7 @@ public class WebSecurityConfig {
                     .loginPage("/login.html").loginProcessingUrl("/my/login")
                     .and()
 
-                    //2、登出配置11
+                    //2、登出配置
                     .logout()
                     .logoutUrl("/my/logout")
 //                    .addLogoutHandler(new CustomLogoutHandler())
