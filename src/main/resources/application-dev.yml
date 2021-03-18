@@ -1,0 +1,15 @@
+server:
+  port: 8101
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: GXENTF6Jz9TQo2Fx
+    url: jdbc:mysql://8.136.198.25:3306?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Calcutta&allowMultiQueries=true
+
+mybatis:
+  mapper-locations: classpath:mybatis/*.xml
+  #如果不配置此属性，resultType就得写全名resultType="com.itheima.domain.items"，
+  #但是如果配置了此属性，就可以不用写全路径直接写resultType="items"即可
+  #type-aliases-package: com.example.appdemo.mybatis.entity
