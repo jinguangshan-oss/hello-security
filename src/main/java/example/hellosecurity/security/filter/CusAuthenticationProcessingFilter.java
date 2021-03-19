@@ -1,5 +1,7 @@
 package example.hellosecurity.security.filter;
 
+import example.hellosecurity.security.handler.CusAuthenticationFailureHandler;
+import example.hellosecurity.security.handler.CusAuthenticationSuccessHandler;
 import example.hellosecurity.security.provider.CusAuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -16,8 +18,12 @@ import java.io.IOException;
 @Component
 public class CusAuthenticationProcessingFilter extends AbstractAuthenticationProcessingFilter {
 
-    public CusAuthenticationProcessingFilter(CusAuthenticationManager authenticationManager) {
+    public CusAuthenticationProcessingFilter(CusAuthenticationManager authenticationManager,
+                                             CusAuthenticationFailureHandler failureHandler,
+                                             CusAuthenticationSuccessHandler successHandler) {
         super(new AntPathRequestMatcher("/my/login", "POST"), authenticationManager);
+        this.setAuthenticationFailureHandler(failureHandler);
+        this.setAuthenticationSuccessHandler(successHandler);
     }
 
     /**

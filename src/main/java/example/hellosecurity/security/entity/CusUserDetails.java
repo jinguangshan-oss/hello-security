@@ -1,6 +1,5 @@
 package example.hellosecurity.security.entity;
 
-import example.hellosecurity.security.authorities.CusGrantedAuthority;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
