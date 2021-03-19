@@ -1,4 +1,4 @@
-package example.hellosecurity.security.authorities;
+package example.hellosecurity.security.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;

@@ -1,6 +1,5 @@
 package example.hellosecurity.security.provider;
 
-import example.hellosecurity.security.authorities.CusGrantedAuthority;
 import example.hellosecurity.security.entity.CusUserDetails;
 import example.hellosecurity.security.service.CusUserDetailsService;
 import example.hellosecurity.security.util.PasswordUtil;

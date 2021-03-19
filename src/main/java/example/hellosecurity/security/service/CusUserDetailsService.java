@@ -2,7 +2,7 @@ package example.hellosecurity.security.service;
 
 import example.hellosecurity.mybatis.entity.User;
 import example.hellosecurity.mybatis.mapper.UserMapper;
-import example.hellosecurity.security.authorities.CusGrantedAuthority;
+import example.hellosecurity.security.entity.CusGrantedAuthority;
 import example.hellosecurity.security.entity.CusUserDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -33,7 +33,7 @@ public class CusUserDetailsService implements UserDetailsService {
         Collection<CusGrantedAuthority> cusGrantedAuthoritys = new ArrayList<>();
         String[] roles = user.getRole().split(",");
         for(String role : roles){
-            cusGrantedAuthoritys.add(new CusGrantedAuthority(user.getRole()));
+            cusGrantedAuthoritys.add(new CusGrantedAuthority(role));
         }
 
         //初始化CusUserDetails并返回
