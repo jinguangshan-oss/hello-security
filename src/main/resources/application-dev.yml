@@ -5,8 +5,8 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    password: GXENTF6Jz9TQo2Fx
-    url: jdbc:mysql://8.136.198.25:3306?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Calcutta&allowMultiQueries=true
+    password: root
+    url: jdbc:mysql://8.136.198.25:3306/security?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Calcutta&allowMultiQueries=true
 
 mybatis:
   mapper-locations: classpath:mybatis/*.xml

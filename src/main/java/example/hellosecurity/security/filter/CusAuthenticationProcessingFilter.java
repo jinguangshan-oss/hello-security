@@ -17,7 +17,7 @@ import java.io.IOException;
 public class CusAuthenticationProcessingFilter extends AbstractAuthenticationProcessingFilter {
 
     public CusAuthenticationProcessingFilter(CusAuthenticationManager authenticationManager) {
-        super(new AntPathRequestMatcher("/my/login", "POST"),authenticationManager);
+        super(new AntPathRequestMatcher("/my/login", "POST"), authenticationManager);
     }
 
     /**

@@ -33,6 +33,7 @@ public class WebSecurityConfig {
      */
     @Configuration
     public static class FormLoginWebSecurityConfigurerAdapter extends WebSecurityConfigurerAdapter {
+
         @Autowired
         CusAuthenticationProcessingFilter cusAuthenticationProcessingFilter;
 

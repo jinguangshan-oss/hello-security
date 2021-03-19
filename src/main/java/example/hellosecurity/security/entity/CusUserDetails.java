@@ -1,34 +1,36 @@
 package example.hellosecurity.security.entity;
 
-import example.hellosecurity.mybatis.entity.User;
+import example.hellosecurity.security.authorities.CusGrantedAuthority;
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class CusUserDetails implements UserDetails {
 
-    User user;
+    String userName;
+
+    String password;
+
+    Collection<CusGrantedAuthority> cusGrantedAuthoritys;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+        return cusGrantedAuthoritys;
     }
 
     @Override
     public String getPassword() {
-        return user.getPassword();
+        return password;
     }
 
     @Override
     public String getUsername() {
-        return user.getName();
+        return userName;
     }
 
     @Override
