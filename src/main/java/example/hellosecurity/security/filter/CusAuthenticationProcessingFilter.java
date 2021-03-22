@@ -21,7 +21,8 @@ public class CusAuthenticationProcessingFilter extends AbstractAuthenticationPro
     public CusAuthenticationProcessingFilter(CusAuthenticationManager authenticationManager,
                                              CusAuthenticationFailureHandler failureHandler,
                                              CusAuthenticationSuccessHandler successHandler) {
-        super(new AntPathRequestMatcher("/my/login", "POST"), authenticationManager);
+        super(new AntPathRequestMatcher("/my/login", "POST"));
+        this.setAuthenticationManager(authenticationManager);
         this.setAuthenticationFailureHandler(failureHandler);
         this.setAuthenticationSuccessHandler(successHandler);
     }

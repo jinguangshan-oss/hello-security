@@ -50,6 +50,7 @@ public class WebSecurityConfig {
                     .authorizeRequests(accessConfig -> accessConfig
                             .antMatchers("/login.html").permitAll()
                             .anyRequest().authenticated()
+//                            .anyRequest().permitAll()
                     )
                     .addFilterAt(cusAuthenticationProcessingFilter, UsernamePasswordAuthenticationFilter.class)
                     ;

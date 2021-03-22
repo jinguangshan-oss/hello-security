@@ -13,3 +13,10 @@ mybatis:
   #如果不配置此属性，resultType就得写全名resultType="com.itheima.domain.items"，
   #但是如果配置了此属性，就可以不用写全路径直接写resultType="items"即可
   #type-aliases-package: com.example.appdemo.mybatis.entity
+
+nacos:
+  config:
+    server-addr: 8.136.198.25:8848
+  discovery:
+    server-addr: 8.136.198.25:8848
+#spring.cloud.nacos.discovery.server-addr=127.0.0.1:8848
