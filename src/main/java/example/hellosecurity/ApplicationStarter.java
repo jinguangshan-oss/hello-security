@@ -15,7 +15,7 @@ import javax.annotation.PostConstruct;
 
 @SpringBootApplication
 @MapperScan(value = "example.hellosecurity.mybatis.mapper")
-@NacosPropertySource(dataId = "example", autoRefreshed = true)
+@NacosPropertySource(dataId = "hello-security-data-id", autoRefreshed = true)
 public class ApplicationStarter {
 
 	@NacosValue(value = "${message:default message}", autoRefreshed = true)
