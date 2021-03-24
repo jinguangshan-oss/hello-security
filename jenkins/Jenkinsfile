@@ -42,7 +42,7 @@ pipeline {
         stage ('Runtime') {
             steps{
                 sh "chmod +x -R ${env.WORKSPACE}"
-                sh './jenkins/appdemo/deliver.sh'
+                sh './jenkins/deliver.sh'
             }
             post {
                 success {
